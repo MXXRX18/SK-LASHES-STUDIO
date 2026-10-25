@@ -1,0 +1,14 @@
+.reveal{opacity:1;filter:none;transform:none}
+.reveal.reveal-ready{transition:opacity .7s ease,transform .7s var(--ease),filter .7s ease}
+.reveal.reveal-ready:not(.is-visible):not(:focus-within){opacity:0;filter:blur(7px);transform:translateY(22px)}
+.photo[data-state=loading]:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(232,193,210,.1) 50%,transparent 80%);background-size:200% 100%;pointer-events:none;animation:skeleton-sweep 1.2s ease 1,skeleton-exit 0s 1.8s forwards}
+@keyframes skeleton-sweep{from{background-position:200% 0}to{background-position:-200% 0}}
+@keyframes skeleton-exit{to{opacity:0;visibility:hidden}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+ .reveal.reveal-ready:not(.is-visible){opacity:1;filter:none;transform:none}
+ .photo[data-state=loading]:after{display:none}
+ .carrusel-h__foto{filter:none}
+ .button:hover{transform:none}
+}

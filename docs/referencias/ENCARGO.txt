@@ -1,0 +1,459 @@
+
+
+Actúa como director de arte digital, diseñador senior de interfaces y desarrollador frontend especializado en sitios de belleza de alta gama. Diseña y desarrolla una web completa para SK Lashes Studio. Prioriza una identidad visual propia, una composición editorial cuidada y una implementación funcional. No te limites a describir la propuesta: entrega el proyecto terminado como SK-Lashes-Studio.zip, con el código fuente organizado, recursos y documentación para instalarlo y ejecutarlo.
+
+1. OBJETIVO Y DIRECCIÓN CREATIVA
+
+SK Lashes Studio es un estudio de estética enfocado en servicios de pestañas. La web debe transmitir precisión, elegancia, seriedad, confianza y alto prestigio mediante su diseño. Combina Cinematic Design con Glassmorphism de forma contenida: fotografía protagonista, iluminación dramática suave, profundidad visual, espacios amplios, títulos expresivos y superficies translúcidas discretas.
+
+La experiencia debe sentirse diseñada para esta marca. Evita la apariencia de plantilla de salón, dashboard, ecommerce o landing genérica. El lujo debe percibirse en la fotografía, la jerarquía y los detalles, sin llenar la página de adjetivos.
+
+Paleta propuesta, centralizada en variables de diseño:
+- Negro profundo: #100D10, base principal.
+- Ciruela oscuro: #24151E, profundidad y superficies secundarias.
+- Rosa vino: #7B294C, acento principal y acciones.
+- Rosa malva: #B56D88, pequeños detalles y acentos de apoyo.
+- Blanco cálido: #F7F3F5, texto y secciones claras puntuales.
+
+Usa degradados tonales muy suaves entre negro, ciruela y rosa vino. Evita grandes superficies de rosa plano, neón, rosa infantil, brillos exagerados, partículas, corazones o decoración que reste seriedad. Verifica el contraste de cada combinación; el acento rosa no debe comprometer la lectura.
+
+Combina una serif editorial elegante para titulares con una sans serif limpia para cuerpo, precios, navegación y formulario. Como referencia estética, Cormorant Garamond e Inter, si sus licencias y archivos permiten incorporarlas correctamente. Usa como máximo dos familias. Mantén letras grandes y legibles; evita cursivas extensas y pesos demasiado finos en tamaños pequeños.
+
+Diseña con una retícula consistente, alineaciones precisas y espacios generosos. Usa separadores finos y cambios sutiles de fondo para organizar el contenido. Reserva el cristal para navegación, controles del carrusel y, si mejora la composición, una única superficie de formulario. No encierres todas las secciones en tarjetas. Mantén un fondo suficientemente opaco para leer el texto y ofrece fallback cuando backdrop-filter no esté disponible.
+
+2. ESTRUCTURA Y NAVEGACIÓN
+
+La página principal debe contener, en este orden:
+- Inicio.
+- Servicios.
+- Galería.
+- Agenda una cita.
+- Ubicación.
+- Pie de página mínimo.
+
+El menú debe incluir enlaces a estas secciones y un CTA destacado «Agendar cita». Puede permanecer fijo arriba si no tapa el contenido. Aplica scroll-margin-top a los destinos y un menú móvil accesible, con cierre por Escape, foco correcto y controles amplios.
+
+El CTA «Agendar cita», tanto en el menú como en cualquier sección, abrirá la ruta independiente /agendar en una NUEVA PESTAÑA del navegador mediante un enlace real con target="_blank" y rel="noopener noreferrer". Indica discretamente que abre otra pestaña. La página de agenda pertenece a la misma web: no es un modal, acordeón, overlay ni formulario incrustado en Inicio. El comportamiento final de pestañas o ventanas depende del navegador, pero no debe reemplazarse deliberadamente la página principal.
+
+3. INICIO CINEMATOGRÁFICO
+
+Crea un hero editorial con una fotografía de alta calidad de pestañas o un primer plano de la mirada, encuadre deliberado y espacio suficiente para el texto. Cuida especialmente que el recorte móvil no corte el detalle principal. Usa un degradado oscuro localizado para mejorar el contraste sin ocultar la imagen.
+
+Texto propuesto:
+- Marca: «SK Lashes Studio».
+- Titular: «El detalle está en tu mirada.»
+- Apoyo: «Diseño de pestañas con atención personalizada.»
+- Acción principal: «Agendar cita».
+- Acción secundaria discreta: «Ver servicios».
+
+Mantén el texto breve. Si no se proporciona logotipo, crea una firma tipográfica provisional con el nombre exacto, fácil de sustituir. Si faltan fotografías reales, utiliza recursos de demostración con derechos de uso claros y documenta su sustitución; no presentes fotografías de terceros o imágenes generadas como resultados reales del estudio. No inventes testimonios, premios, certificaciones, antigüedad, cantidad de clientes ni promesas de resultados.
+
+4. SERVICIOS Y PRECIOS
+
+Presenta el catálogo como una lista editorial elegante: nombres alineados a la izquierda, precios a la derecha, jerarquía clara y separadores discretos. Evita una tarjeta para cada servicio. En móvil conserva la lectura del nombre y el precio sin desbordamientos.
+
+Respeta exactamente estos servicios y cantidades:
+
+Servicio | Precio
+Clásicas | $500
+Efecto rímel | $580
+Hawaianas 2D | $600
+Brasileñas 3D | $600
+Egipcias 4D | $650
+Tecnológicas — 5D | $670
+Tecnológicas — Kim K | $700
+Tecnológicas — Wispy | $720
+Tecnológicas — Foxi | $750
+Extra color | $90
+Eyeliner | $720
+Retiro | $200
+Retoque | Según el porcentaje que haga falta; precio por confirmar
+
+Agrupa visualmente las cuatro variantes bajo «Tecnológicas», pero cada variante debe ser una opción independiente en el formulario. No conviertas «Tecnológicas» en un servicio adicional seleccionable. Extra color y Retoque también deben estar disponibles en la selección. Conserva el símbolo $; no asumas un código de moneda sin confirmación del negocio.
+
+Información adicional, en dos líneas discretas:
+«Trabajamos con cita previa.»
+«Medios de pago: efectivo, depósito y transferencia.»
+
+No inventes duración de servicios, descuentos, paquetes, cargos, políticas ni tarifas de retoque. No representes Retoque como gratuito o con precio cero.
+
+5. GALERÍA: REUTILIZAR EL CARRUSEL SUMINISTRADO
+
+El ANEXO A contiene el HTML, CSS y JavaScript del carrusel aportado por el cliente, normalizado para eliminar barras de escape del texto original. Debe ser la base obligatoria de la galería. No lo sustituyas por un slider genérico ni por una biblioteca que cambie su composición.
+
+Conserva su carácter horizontal: fotografía central nítida, imágenes laterales más pequeñas y desenfocadas, transiciones combinadas de desplazamiento, escala, opacidad y blur, controles anterior/siguiente, navegación por flechas del teclado y gestos táctiles.
+
+Conserva como referencia las escalas 1 / 0.85 / 0.70, opacidades 1 / 0.65 / 0.18, desenfoques 0 / 3 / 8 px y duración de transición próxima a 800 ms. Ajusta medidas, radios, sombras, controles y contraste a la identidad de SK Lashes Studio.
+
+La navegación circular manual del código está permitida. No agregues autoplay, movimiento perpetuo, marquesinas, carruseles adicionales ni sliders flotantes infinitos. Las fotografías solo cambian por una acción explícita del visitante.
+
+Adapta el bloque al framework elegido con componentes, estado y limpieza de efectos/listeners/temporizadores. No pegues un script global que se ejecute repetidamente ni manipules nodos de React de manera que entren en conflicto con su estado.
+
+Revisa y corrige estos detalles sin perder la apariencia original:
+- Evitar cruces y saltos visibles al pasar entre la última y primera imagen, incluidos clics rápidos.
+- Evitar que la clase «salto» deje fotos temporalmente sin animación cuando vuelvan a ocupar posiciones visibles.
+- Controles táctiles de al menos 44 × 44 px, aunque el código base use botones menores.
+- No capturar deslizamientos verticales como cambios de fotografía; comparar desplazamientos horizontal y vertical.
+- No permitir que fotos invisibles intercepten clics o reciban el foco.
+- Mantener navegación accesible, foco visible, etiquetas descriptivas y anuncio breve de la imagen activa; no trasladar el foco inesperadamente al cambiar.
+- Sustituir los textos alt genéricos por descripciones reales de las imágenes elegidas.
+- Respetar prefers-reduced-motion en CSS y en cualquier temporización JavaScript.
+- Mostrar un estado visual cuidado si una imagen falla, sin iconos de imagen rota.
+
+6. AGENDA EN PÁGINA INDEPENDIENTE
+
+En Inicio, la sección «Agenda una cita» tendrá solo un titular breve, una frase y el enlace a /agendar en nueva pestaña.
+
+La página /agendar debe conservar la identidad del sitio y presentar un formulario limpio, sin distracciones, con los siguientes campos obligatorios:
+- Primer nombre: caja de texto con etiqueta visible.
+- Primer apellido: caja de texto con etiqueta visible.
+- Servicio: selección múltiple accesible de 1 a 5 servicios distintos, mediante casillas de verificación o un control equivalente fácil de usar en móvil. Mostrar nombre y precio, además de un contador «0 de 5 seleccionados». Al llegar a cinco, impedir nuevas selecciones y permitir desmarcar cualquiera.
+- Día de preferencia: campo de fecha con calendario para seleccionar una fecha específica. No permitir fechas anteriores al día actual del usuario. Evitar errores de zona horaria al interpretar YYYY-MM-DD.
+
+Acepta nombres con acentos, ñ, espacios, apóstrofos y guiones. Elimina espacios sobrantes sin imponer reglas que rechacen nombres válidos. Usa mensajes de error breves, junto a su campo y accesibles para lectores de pantalla. Conserva los datos si hay un error.
+
+El formulario NO muestra horarios disponibles, NO reserva espacios y NO confirma automáticamente citas. No añadas campos de hora, correo, teléfono u otros datos no solicitados. No se necesita base de datos ni panel administrativo para este alcance.
+
+Muestra cerca del botón:
+«Tu solicitud está sujeta a disponibilidad. Confirmaremos tu cita por WhatsApp.»
+
+Botón final: «Continuar en WhatsApp».
+
+7. MENSAJE Y FLUJO DE WHATSAPP
+
+Número de atención proporcionado por el cliente: 999 340 3892. Usa el prefijo de México +52. Centraliza el valor WHATSAPP_PHONE = "529993403892", en formato internacional y solo dígitos. Para mostrarlo al público usa «+52 999 340 3892». El enlace base es https://wa.me/529993403892. No agregues un dígito 1 después de 52 y no sustituyas este número por uno de demostración.
+
+Después de validar los campos, construye un mensaje con este formato:
+
+Hola, SK Lashes Studio. Me gustaría solicitar una cita.
+
+Nombre: [PRIMER NOMBRE] [PRIMER APELLIDO]
+Servicios solicitados:
+- [SERVICIO 1] — [PRECIO]
+- [SERVICIO 2] — [PRECIO, SI APLICA]
+Día de preferencia: [FECHA EN ESPAÑOL]
+
+Quedo pendiente de que me confirmen disponibilidad y horario. Entiendo que mi cita aún no está confirmada.
+
+Incluye solo los servicios seleccionados. Para Retoque escribe «precio por confirmar según el porcentaje que haga falta». No calcules un total definitivo si hay servicios de precio variable; este alcance no requiere mostrar totales.
+
+Genera el enlace mediante https://wa.me/529993403892?text=MENSAJE y codifica el mensaje completo con encodeURIComponent para conservar acentos, saltos de línea y caracteres especiales. Construye la URL a partir de WHATSAPP_PHONE para mantener el número centralizado. Ábrelo únicamente como consecuencia de la acción del visitante, de forma compatible con WhatsApp móvil o WhatsApp Web según el dispositivo.
+
+El enlace abre un mensaje prellenado; el visitante deberá enviarlo desde WhatsApp. La web no puede afirmar «mensaje enviado», «cita confirmada» o «reserva completada» por el simple hecho de abrir el enlace. No envíes mensajes automáticamente durante las pruebas.
+
+Si falta WHATSAPP_PHONE o su formato no es válido, no abras un destinatario ficticio: muestra un estado honesto de contacto pendiente de configuración y documenta claramente el dato necesario para activar el flujo. No guardes datos personales en localStorage ni los envíes a servicios adicionales.
+
+8. UBICACIÓN
+
+Usa esta ubicación suministrada por el cliente:
+https://maps.app.goo.gl/JLxjknSfmM7sDLW98
+
+Diseña una sección sencilla con el título «Encuéntranos», un mapa interactivo amplio y un enlace «Cómo llegar» que abra el enlace suministrado. Evita bloques largos de dirección o indicaciones no verificadas.
+
+Resuelve primero el enlace corto para identificar el lugar exacto. No lo pongas directamente como src de un iframe: obtén una URL válida de inserción de Google Maps para ese mismo punto. Puedes usar el enlace de «Insertar un mapa» que proporcione Google Maps o, si corresponde al proyecto, Maps Embed API con su configuración necesaria.
+
+No inventes dirección, coordenadas, Place ID ni claves. Si el enlace no se puede resolver o falta el embed, conserva el enlace «Cómo llegar», deja GOOGLE_MAPS_EMBED_URL como configuración pendiente y declara que el mapa interactivo queda pendiente; no muestres otro lugar como si fuera el negocio.
+
+El mapa debe tener título accesible, proporción reservada para evitar saltos de diseño, carga diferida y adaptación móvil. Mantén visibles los controles y la atribución de Google. No apliques filtros visuales que los vuelvan ilegibles ni bloquees permanentemente la interacción del mapa.
+
+9. ANIMACIONES DE SCROLL EN AMBAS DIRECCIONES
+
+Aplica apariciones suaves al entrar en el viewport: opacidad de 0 a 1, blur de 6–8 px a 0 y desplazamiento vertical de aproximadamente 16–24 px. Usa duraciones de 550–800 ms y desfases cortos de hasta 120 ms entre elementos relacionados.
+
+El efecto debe repetirse al regresar a una sección tanto bajando como subiendo. Reinicia el estado solo cuando el elemento haya salido completamente del viewport, y usa un umbral de entrada que evite parpadeos en los bordes. Mantén visible cualquier elemento con foco de teclado y su contexto.
+
+Usa IntersectionObserver o una solución equivalente ligera. No uses scroll hijacking, movimiento obligado, parallax intenso, animaciones de página completa ni listeners que recalculen todos los elementos en cada píxel. Evita animar continuamente filtros costosos.
+
+Aplica el reveal al contenedor externo del carrusel para no sobrescribir los transforms que posicionan sus fotografías. Al finalizar cada aparición, deja texto e imágenes totalmente nítidos. Con movimiento reducido, muestra el contenido sin desplazamientos ni desenfoques animados. Si JavaScript falla, el contenido principal debe seguir visible.
+
+10. PRECARGA SKELETON
+
+Implementa skeletons discretos que respeten las dimensiones reales de imágenes o contenido pendiente. No uses una pantalla de carga que bloquee toda la web ni contadores ficticios.
+
+Retíralos tan pronto esté disponible el contenido y, como límite de la espera visual controlada por la interfaz, antes de dos segundos desde su render. No impongas una espera artificial de dos segundos. Si una imagen tarda más, deja visible el resto de la página y usa un fondo o fallback estable hasta que llegue. Un skeleton no puede garantizar que una conexión lenta termine de descargar en dos segundos.
+
+Evita destellos, transiciones de blanco a negro y cambios de altura. Con prefers-reduced-motion, desactiva el shimmer. No ocultes textos y acciones que ya pueden mostrarse.
+
+11. TECNOLOGÍAS Y ORGANIZACIÓN
+
+Fecha de corte solicitada: 24 de octubre de 2026. Emplea las versiones estables más recientes publicadas hasta esa fecha y compatibles entre sí. Verifica los números exactos en documentación y releases oficiales antes de instalar; no inventes versiones y no uses beta, canary, nightly o APIs experimentales solo por ser nuevas.
+
+Stack preferido: Next.js con App Router, React, TypeScript en modo estricto y CSS moderno; Tailwind CSS puede usarse como herramienta de estilos sin imponer componentes de plantilla. Usa una versión estable de Node.js compatible con el conjunto. Prioriza CSS e IntersectionObserver para las animaciones; añade otra dependencia únicamente si aporta una ventaja concreta.
+
+Referencias verificadas para la selección: Next.js 16.4, React 19.3 y Tailwind CSS 4.3. Esto no sustituye verificar los parches estables exactos y la compatibilidad al preparar el proyecto. Documenta versiones finales, fecha y fuentes en README, y entrega el lockfile correspondiente. Si no puedes verificar una versión, indícalo y no la presentes como comprobada.
+
+Organización esperada, adaptable sin perder separación de responsabilidades:
+- src/app/page.tsx: página principal.
+- src/app/agendar/page.tsx: página independiente de agenda.
+- src/app/layout.tsx: layout, idioma y metadatos.
+- src/components/layout/: navegación y pie de página.
+- src/components/sections/: Inicio, Servicios, Agenda y Ubicación.
+- src/components/gallery/: componente y controles del carrusel.
+- src/components/booking/: formulario y selector de servicios.
+- src/data/services.ts: única fuente de servicios, IDs y precios.
+- src/config/site.ts: marca, teléfono, enlaces, moneda opcional y configuración pública.
+- src/lib/whatsapp.ts: generación del mensaje y URL.
+- src/hooks/: lógica reutilizable, incluida la observación del viewport.
+- src/styles/: variables, estilos generales y animaciones.
+- public/images/hero/ y public/images/gallery/: fotografías optimizadas.
+- public/fonts/: fuentes locales, si se utilizan.
+- docs/: notas de configuración, verificación y licencias de recursos.
+- package.json, lockfile, configuración de TypeScript, .env.example si se requiere y README.md.
+
+No acumules toda la aplicación en un archivo gigante. Evita duplicar el catálogo entre la página y el formulario. Separa recursos, estilos y comportamiento. No expongas credenciales; el teléfono y los enlaces públicos pueden centralizarse en configuración pública. Mantén rutas relativas y pasos de instalación reproducibles.
+
+12. RESPONSIVE, ACCESIBILIDAD Y VERIFICACIÓN
+
+Diseña y revisa móvil, tablet y escritorio, incluyendo anchos de 360, 390, 768, 1024 y 1440 px. No debe haber desplazamiento horizontal accidental. Usa HTML semántico, idioma español, un H1 claro por página, jerarquía coherente, etiquetas de formulario, estados de foco y controles utilizables con teclado. Comprueba contraste de texto y zoom al 200 %.
+
+Optimiza las fotografías con dimensiones explícitas, formatos modernos y alternativas compatibles. Prioriza la imagen principal; difiere galería y mapa cuando corresponda. Mantén el JavaScript y los efectos de blur contenidos para que el sitio funcione bien en móviles. No uses video pesado de fondo, audio automático ni recursos que dependan de enlaces temporales.
+
+Verifica al menos:
+- Build, comprobación de tipos y lint sin errores.
+- Menú, anclas y CTA de agenda en nueva pestaña.
+- Formulario con 0, 1, 5 y un intento de 6 servicios.
+- Fecha anterior a hoy, fecha válida y conservación del día elegido.
+- Nombres con acentos y caracteres válidos.
+- Mensaje de WhatsApp con todos los datos, saltos de línea y Retoque sin importe inventado.
+- Estado correcto cuando faltan teléfono, fotografías o embed.
+- Carrusel mediante botones, teclado y gesto horizontal; scroll vertical móvil; vuelta entre primera y última foto y clics rápidos.
+- Reveals al bajar y subir, navegación por teclado y movimiento reducido.
+- Skeleton con carga rápida, lenta y fallo de imagen.
+- Mapa del lugar correcto cuando el dato de inserción esté disponible.
+
+No afirmes haber probado un dispositivo, navegador, integración o rendimiento si no lo comprobaste. Reporta lo ejecutado y cualquier pendiente con claridad.
+
+13. LÍMITES VISUALES Y ENTREGA
+
+No incluir tarjetas innecesarias, secciones de relleno, párrafos extensos, sliders automáticos infinitos, efecto de seguimiento del cursor, cursores personalizados, botones magnéticos, partículas, exceso de glassmorphism, testimonios falsos ni iconos decorativos repetitivos.
+
+El resultado final debe verse como un estudio de pestañas de alta gama: fotografía protagonista, catálogo claro, pocos textos, rosa oscuro con negro y blanco, movimiento sutil y una solicitud de cita fácil de completar.
+
+Entrega SK-Lashes-Studio.zip con el código fuente completo, recursos necesarios, licencias aplicables y README en español. Excluye node_modules, caches, credenciales y archivos temporales. Incluye comandos de instalación, desarrollo y build, requisitos de ejecución, instrucciones para sustituir imágenes y configurar WhatsApp y Google Maps, y una lista breve de lo verificado.
+
+No te detengas en un mockup o una explicación: implementa y empaqueta. Si algún dato del negocio no está disponible, continúa con el diseño y la lógica, deja esa configuración identificada y explica qué falta para activarla. No presentes como operativas integraciones que aún no están configuradas. La entrega solicitada es el archivo ZIP; no publiques el sitio ni envíes mensajes a terceros salvo instrucción adicional.
+
+ANEXO A — CÓDIGO BASE OBLIGATORIO DEL CARRUSEL
+
+Este bloque conserva la lógica y los valores del código aportado. Se han limpiado las barras de escape y compactado el formato. Sus rutas fotos/foto1.jpg a fotos/foto5.jpg son referencias para sustituir durante la implementación. Las mejoras de accesibilidad y robustez indicadas en el apartado 5 deben aplicarse al integrarlo.
+
+<!-- CARRUSEL FOTOGRÁFICO HORIZONTAL -->
+<section class="carrusel-h" id="carrusel-horizontal"
+         aria-label="Galería fotográfica" tabindex="0">
+  <button class="carrusel-h__foto" type="button">
+    <img src="fotos/foto1.jpg" alt="Fotografía 1" draggable="false">
+  </button>
+  <button class="carrusel-h__foto" type="button">
+    <img src="fotos/foto2.jpg" alt="Fotografía 2" draggable="false">
+  </button>
+  <button class="carrusel-h__foto" type="button">
+    <img src="fotos/foto3.jpg" alt="Fotografía 3" draggable="false">
+  </button>
+  <button class="carrusel-h__foto" type="button">
+    <img src="fotos/foto4.jpg" alt="Fotografía 4" draggable="false">
+  </button>
+  <button class="carrusel-h__foto" type="button">
+    <img src="fotos/foto5.jpg" alt="Fotografía 5" draggable="false">
+  </button>
+  <div class="carrusel-h__controles">
+    <button class="carrusel-h__flecha anterior" type="button" aria-label="Anterior"></button>
+    <button class="carrusel-h__flecha siguiente" type="button" aria-label="Siguiente"></button>
+  </div>
+</section>
+
+<style>
+.carrusel-h {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: clamp(240px, 48vw, 510px);
+  margin: 0 auto;
+  overflow: hidden;
+  isolation: isolate;
+  outline-offset: 4px;
+}
+.carrusel-h__foto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(76vw, 650px);
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translate(-50%, -50%) translateX(var(--x, 0%)) scale(var(--escala, 1));
+  opacity: var(--opacidad, 1);
+  filter: blur(var(--desenfoque, 0px));
+  z-index: var(--profundidad, 1);
+  will-change: transform, opacity, filter;
+}
+.carrusel-h.lista .carrusel-h__foto {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.8s ease-in-out,
+              filter 0.8s ease-in-out,
+              box-shadow 0.8s ease;
+}
+.carrusel-h__foto.salto { transition: none !important; }
+.carrusel-h__foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  user-select: none;
+}
+.carrusel-h__controles {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 20;
+}
+.carrusel-h__flecha {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(30, 30, 30, 0.65);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.carrusel-h__flecha:hover {
+  background: rgba(30, 30, 30, 0.9);
+  transform: scale(1.08);
+}
+.carrusel-h__flecha::before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
+.carrusel-h__flecha.anterior::before {
+  transform: rotate(-135deg);
+  margin-left: 4px;
+}
+.carrusel-h__flecha.siguiente::before {
+  transform: rotate(45deg);
+  margin-right: 4px;
+}
+@media (max-width: 600px) {
+  .carrusel-h { height: 240px; }
+  .carrusel-h__foto { width: 76vw; border-radius: 14px; }
+  .carrusel-h__controles { right: 12px; bottom: 8px; }
+  .carrusel-h__flecha { width: 32px; height: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carrusel-h.lista .carrusel-h__foto { transition-duration: 0.01ms; }
+}
+</style>
+
+<script>
+(() => {
+  const carrusel = document.getElementById("carrusel-horizontal");
+  if (!carrusel) return;
+  const fotos = Array.from(carrusel.querySelectorAll(".carrusel-h__foto"));
+  const botonAnterior = carrusel.querySelector(".anterior");
+  const botonSiguiente = carrusel.querySelector(".siguiente");
+  const total = fotos.length;
+  if (total === 0) return;
+  let actual = 0;
+  let inicioX = 0;
+  let ultimoDeslizamiento = 0;
+  const temporizadores = new WeakMap();
+
+  function posicionRelativa(indice) {
+    let posicion = (indice - actual + total) % total;
+    if (posicion > Math.floor(total / 2)) posicion -= total;
+    return posicion;
+  }
+
+  function actualizar() {
+    fotos.forEach((foto, indice) => {
+      const posicion = posicionRelativa(indice);
+      const distancia = Math.abs(posicion);
+      const escala = distancia === 0 ? 1 : distancia === 1 ? 0.85 : 0.70;
+      const opacidad = distancia === 0 ? 1 : distancia === 1 ? 0.65 : distancia === 2 ? 0.18 : 0;
+      const desenfoque = distancia === 0 ? 0 : distancia === 1 ? 3 : 8;
+      const desplazamiento = posicion * 65;
+      const posicionAnterior = foto.dataset.posicion;
+      if (posicionAnterior !== undefined && Math.abs(Number(posicionAnterior) - posicion) > 1) {
+        foto.classList.add("salto");
+        clearTimeout(temporizadores.get(foto));
+        const temporizador = setTimeout(() => foto.classList.remove("salto"), 820);
+        temporizadores.set(foto, temporizador);
+      }
+      foto.style.setProperty("--x", desplazamiento + "%");
+      foto.style.setProperty("--escala", escala);
+      foto.style.setProperty("--opacidad", opacidad);
+      foto.style.setProperty("--desenfoque", desenfoque + "px");
+      foto.style.setProperty("--profundidad", total - distancia);
+      foto.dataset.posicion = posicion;
+      foto.tabIndex = distancia === 0 ? 0 : -1;
+      if (distancia === 0) foto.setAttribute("aria-current", "true");
+      else foto.removeAttribute("aria-current");
+    });
+  }
+
+  function cambiar(direccion) {
+    actual = (actual + direccion + total) % total;
+    actualizar();
+  }
+
+  botonAnterior.addEventListener("click", () => cambiar(-1));
+  botonSiguiente.addEventListener("click", () => cambiar(1));
+  fotos.forEach((foto, indice) => {
+    foto.addEventListener("click", () => {
+      if (Date.now() - ultimoDeslizamiento < 500) return;
+      const posicion = posicionRelativa(indice);
+      if (posicion === -1 || posicion === 1) cambiar(posicion);
+    });
+  });
+  carrusel.addEventListener("keydown", (evento) => {
+    if (evento.key === "ArrowRight") {
+      evento.preventDefault();
+      cambiar(1);
+    }
+    if (evento.key === "ArrowLeft") {
+      evento.preventDefault();
+      cambiar(-1);
+    }
+  });
+  carrusel.addEventListener("touchstart", (evento) => {
+    inicioX = evento.changedTouches[0].clientX;
+  }, { passive: true });
+  carrusel.addEventListener("touchend", (evento) => {
+    const finX = evento.changedTouches[0].clientX;
+    const diferencia = inicioX - finX;
+    if (Math.abs(diferencia) > 50) {
+      ultimoDeslizamiento = Date.now();
+      if (diferencia > 0) cambiar(1);
+      else cambiar(-1);
+    }
+  }, { passive: true });
+  actualizar();
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => carrusel.classList.add("lista"));
+  });
+})();
+</script>
+
+FIN DEL PROMPT
+
+Referencias oficiales consultadas para preparar este prompt:
+https://nextjs.org/blog/next-16-4
+https://github.com/vercel/next.js/releases/tag/v16.4.3
+https://react.dev/blog/2026/09/09/react-19-3
+https://tailwindcss.com/blog/tailwindcss-v4-3
+https://developers.google.com/maps/documentation/embed/embedding-map
