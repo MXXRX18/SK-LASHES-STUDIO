@@ -14,7 +14,7 @@ export function Photo({ src, alt, priority = false, className = "", width = 1536
     return () => window.clearTimeout(timer);
   }, [src]);
   return <span className={"photo " + className} data-state={status}>
-    {status !== "error" && <img ref={ref} src={src} alt={alt} width={width} height={height}
+    {status !== "error" && <img ref={ref} src={src.startsWith("/") ? `/SK-LASHES-STUDIO${src}` : src} alt={alt} width={width} height={height}
       loading={priority ? "eager" : "lazy"} fetchPriority={priority ? "high" : "auto"} decoding="async"
       onLoad={() => setStatus("loaded")} onError={() => setStatus("error")} />}
     {status === "error" && <span className="photo-fallback" role="img" aria-label={alt + ". Imagen no disponible."}>SK<span>LASHES STUDIO</span></span>}
